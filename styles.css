@@ -3,6 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Allow page to scroll vertically */
 html, body {
   height: 100%; /* Ensure the page height is full */
   margin: 0;
@@ -16,6 +18,7 @@ body {
   color: #e0e0e0;
 }
 
+/* Hero section */
 header.hero {
   text-align: center;
   padding: 50px;
@@ -24,7 +27,7 @@ header.hero {
 
 h1 {
   font-size: 2.5em;
-  color: #21c1d1;  /* Data blue accent */
+  color: #21c1d1; /* Data blue accent */
 }
 
 p {
@@ -38,21 +41,37 @@ p {
 
 .project-section h2 {
   font-size: 1.8em;
-  color: #ff914d;  /* Orange for insights */
+  color: #ff914d; /* Orange for insights */
   margin-bottom: 15px;
 }
 
+/* Project Row: Allow it to grow naturally and scroll horizontally */
 .project-row {
   display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
   gap: 10px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  overflow-x: auto; /* Allow horizontal scroll for the row */
 }
 
+.project-row::-webkit-scrollbar {
+  height: 8px;
+}
+
+.project-row::-webkit-scrollbar-thumb {
+  background-color: #21c1d1;
+  border-radius: 8px;
+}
+
+/* Project Card Styling */
 .project-card {
   position: relative;
-  flex: 0 0 200px;
+  flex: 0 0 200px; /* Flex item size */
   height: 300px;
   background-color: #333;
   border-radius: 8px;
+  overflow: hidden; /* Hide overflow of the card itself */
   transition: transform 0.3s;
 }
 
@@ -66,6 +85,7 @@ p {
   transform: scale(1.05);
 }
 
+/* Overlay Styling */
 .overlay {
   position: absolute;
   top: 0;
@@ -106,13 +126,4 @@ p {
 
 .overlay a:hover {
   text-decoration: underline;
-}
-
-.project-row::-webkit-scrollbar {
-  height: 8px;
-}
-
-.project-row::-webkit-scrollbar-thumb {
-  background-color: #21c1d1;
-  border-radius: 8px;
 }
