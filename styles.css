@@ -9,6 +9,7 @@ body {
   background-color: #1a1a1a;
   color: #e0e0e0;
   overflow-y: auto;
+  overflow-x: auto;
 }
 
 header.hero {
@@ -39,7 +40,6 @@ p {
 
 .project-row {
   display: flex;
-  overflow-x: auto;
   gap: 10px;
 }
 
@@ -49,7 +49,7 @@ p {
   height: 300px;
   background-color: #333;
   border-radius: 8px;
-  overflow: hidden;
+  overflow: auto;
   transition: transform 0.3s;
 }
 
