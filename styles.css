@@ -4,19 +4,18 @@
   box-sizing: border-box;
 }
 
-/* Allow page to scroll vertically */
+/* Ensure full height for scrolling */
 html, body {
-  height: 100%; /* Ensure the page height is full */
+  height: 100%;
   margin: 0;
   padding: 0;
-  overflow-y: scroll; /* Enable scrolling on the entire page */
+  overflow-y: scroll; /* Enable vertical scroll for the page */
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #1a1a1a;
-  color: #e0e0e0;
-  overflow-y: scroll;
+/* Main container with vertical scrolling */
+.main-container {
+  height: 100%;
+  overflow-y: auto; /* Allow vertical scroll for the page */
 }
 
 /* Hero section */
@@ -28,32 +27,32 @@ header.hero {
 
 h1 {
   font-size: 2.5em;
-  color: #21c1d1; /* Data blue accent */
+  color: #21c1d1;
 }
 
 p {
   color: #b3b3b3;
 }
 
-/* Project Sections */
+/* Project Section Styling */
 .project-section {
   margin: 30px;
 }
 
+/* Project Title */
 .project-section h2 {
   font-size: 1.8em;
-  color: #ff914d; /* Orange for insights */
+  color: #ff914d;
   margin-bottom: 15px;
 }
 
-/* Project Row: Allow it to grow naturally and scroll horizontally */
+/* Project Row - Horizontal scrolling */
 .project-row {
   display: flex;
-  flex-wrap: wrap; /* Allow items to wrap */
-  gap: 10px;
+  gap: 20px;
+  padding: 0 10px;
+  overflow-x: auto; /* Enables horizontal scroll */
   margin-bottom: 20px;
-  padding: 0 20px;
-  overflow-x: auto; /* Allow horizontal scroll for the row */
 }
 
 .project-row::-webkit-scrollbar {
@@ -68,11 +67,11 @@ p {
 /* Project Card Styling */
 .project-card {
   position: relative;
-  flex: 0 0 200px; /* Flex item size */
+  flex: 0 0 200px; /* Set a fixed width for the cards */
   height: 300px;
   background-color: #333;
   border-radius: 8px;
-  overflow: auto; /* Hide overflow of the card itself */
+  overflow: hidden;
   transition: transform 0.3s;
 }
 
@@ -82,11 +81,12 @@ p {
   object-fit: cover;
 }
 
+/* Hover effect for Project Card */
 .project-card:hover {
   transform: scale(1.05);
 }
 
-/* Overlay Styling */
+/* Overlay effect for Project Card */
 .overlay {
   position: absolute;
   top: 0;
@@ -96,11 +96,11 @@ p {
   background: rgba(0, 0, 0, 0.8);
   opacity: 0;
   transition: opacity 0.3s;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 20px;
 }
 
 .project-card:hover .overlay {
