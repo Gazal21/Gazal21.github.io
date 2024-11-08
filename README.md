@@ -1,6 +1,7 @@
 # Welcome to Gazal's Portfolio!
 
-Phone: +1 437 937 1772                                                                     Email: gazal.gazzall@gmail.com
+Phone: +1 437 937 1772                                                                     
+Email: gazal.gazzall@gmail.com
 
 Hi! I’m Gazal, a passionate AI and Data Science enthusiast. This portfolio showcases some of the machine learning and data analysis projects I’ve worked on.
 
