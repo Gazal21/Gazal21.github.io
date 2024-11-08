@@ -13,4 +13,10 @@ Data Analysis and Visualization: Python, SQL, Tableau, Power BI
 
 Feel free to explore my work below!
 
+## My Machine Learning Projects
+
+- [Predicting Discriminatory Group](./Predicting-Discriminatory-Group.md)
+
+
+
 
